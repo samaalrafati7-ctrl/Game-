@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Detective | IEEE CS JUST</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="identity" href="#" aria-label="Cyber Detective home">
+      <span class="mark">CS</span>
+      <span><b>IEEE Computer Society</b><small>JUST Branch</small></span>
+    </a>
+    <span class="header-note">A LITTLE MYSTERY. A LOT OF LOGIC.</span>
+  </header>
+
+  <main class="container">
+    <section id="home" class="page active">
+      <div class="intro">
+        <p class="eyebrow">A GAME BY IEEE CS JUST</p>
+        <h1>Cyber <span>Detective</span></h1>
+        <p class="intro-text">Something suspicious happened. Read the clues, think it through, and find out what really happened.</p>
+        <button class="button primary" id="start">Play the game <span>→</span></button>
+        <p class="small-note">3 short cases · Around 2–3 minutes each</p>
+      </div>
+      <div class="how-card">
+        <h2>How to play</h2>
+        <ol>
+          <li><span>1</span> Read the case.</li>
+          <li><span>2</span> Check the evidence.</li>
+          <li><span>3</span> Answer the questions.</li>
+          <li><span>4</span> Make your final guess.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="player" class="page narrow">
+      <button class="text-button back-home">← Back</button>
+      <p class="eyebrow">BEFORE WE BEGIN</p>
+      <h1>What's your <span>name?</span></h1>
+      <p class="muted">Choose a nickname to appear on the leaderboard.</p>
+      <input id="nickname" maxlength="18" placeholder="Your nickname" autocomplete="off">
+      <button class="button primary full" id="chooseCase">Continue →</button>
+    </section>
+
+    <section id="cases" class="page">
+      <button class="text-button back-player">← Back</button>
+      <p class="eyebrow">PICK A MYSTERY</p>
+      <h1>Choose a <span>case.</span></h1>
+      <div id="caseList" class="case-list"></div>
+    </section>
+
+    <section id="game" class="page">
+      <div class="gamebar">
+        <button class="text-button" id="exit">← Exit</button>
+        <span id="caseNumber" class="eyebrow"></span>
+        <span class="timer">Time: <b id="timer">02:30</b></span>
+      </div>
+      <div class="game-title">
+        <p class="eyebrow">YOUR CASE</p>
+        <h1 id="caseTitle"></h1>
+        <p id="caseIntro" class="muted"></p>
+      </div>
+      <div class="game-columns">
+        <aside class="evidence">
+          <h2>Evidence</h2>
+          <p class="muted tiny">Open each clue before moving on.</p>
+          <div id="evidenceButtons"></div>
+        </aside>
+        <section class="challenge">
+          <div id="challengeContent"></div>
+          <div class="challenge-footer">
+            <span id="stepLabel">STEP 1 OF 3</span>
+            <button class="button primary" id="next" disabled>Continue →</button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="result" class="page narrow">
+      <p class="eyebrow">CASE FINISHED</p>
+      <h1 id="resultHeading">Nice work.</h1>
+      <p id="resultText" class="muted"></p>
+      <div class="result-score"><span>Your score</span><b id="score">0</b></div>
+      <div id="explanation" class="explanation"></div>
+      <button class="button primary full" id="another">Play another case →</button>
+      <button class="text-button full-text" id="showBoard">See leaderboard</button>
+    </section>
+
+    <section id="board" class="page narrow">
+      <button class="text-button" id="boardHome">← Main menu</button>
+      <p class="eyebrow">LOCAL LEADERBOARD</p>
+      <h1>Top <span>detectives.</span></h1>
+      <div id="scores" class="scores"></div>
+      <p class="small-note">Scores are saved in this browser on this device.</p>
+    </section>
+  </main>
+
+  <footer class="footer">IEEE Computer Society · JUST Branch</footer>
+  <script src="script.js"></script>
+</body>
+</html>
